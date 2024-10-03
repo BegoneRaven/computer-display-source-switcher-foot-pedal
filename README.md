@@ -1,4 +1,4 @@
-# Steps in Ubutu 24.04 LTS with GUI
+# Steps in Ubutu 24.04 LTS
 
 ### 1. Install ddcutil  
 And run some commands to find information about your monitor.
@@ -25,8 +25,14 @@ evdev:input:b0003v5131p2019*
 ```
 sudo systemd-hwdb update && sudo udevadm trigger
 ```
-Now the foot pedal's events can be used to create a short cut in GUI
+Now the foot pedal's events are receive-able.
 
-### 5. After that find a way in the UI to create a short cut to run a command (In our case, it would be the executable shell script).
+Ther are now multiple ways to associate the USB button press event to running a command
+
+### A. Headless system or without any Graphical UI stack getting involved
+       This could be the best approach as it does not depend upon X or Wayload or any GUI.
+       Even if the GUI is messed up. this is expected to work
+### B. System with some GUI that can process events
+       Find a way in the UI to create a short cut to run a command (In our case, it would be the executable shell script).
 
 
