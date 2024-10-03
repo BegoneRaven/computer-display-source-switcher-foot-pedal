@@ -1,8 +1,14 @@
 # Steps in Ubutu 24.04 LTS with GUI
 
 ### 1. Install ddcutil  
+And run some commands to find information about your monitor.
+The script essentialy essentially uses VCP (Virtual Control Panel) commands to interact with the monitor.
+Comamnd go via the DDC(Display Data Channel) protocol to your monitor
 ```
 apt-get install ddcutil
+ddcutil detect
+ddcutil getvcp all
+ddcutil getvcp 0x60
 ```
 ### 2. Get a USB fool pedal!
 
